@@ -13,6 +13,20 @@ body{
     margin: 0 auto;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
 a{
 	color: white;
 	text-decoration: none;
@@ -55,11 +69,9 @@ h2{
 
 .site_header nav{
 	float: left;
+	margin: 50px 0px 0px 10px;
 }
 
-.site_header nav{
-	margin: 50px 0px 0px 10px;
-}	
 .site_header a{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00dff9+0,00a1ed+100 */
 	background: #00dff9; /* Old browsers */
@@ -108,14 +120,15 @@ a.button{
 }
 .headerblock {
 	background-image: url(../img/headerbox.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 100%;
+	background-size: cover;
+	/*background-repeat: no-repeat;*/
+	background-position: center center;
 	height: 300px;
 	color: white;
 	padding-left: 50px;
 	position: relative;
 	margin-bottom: 45px;
+	border-radius: 5px;
 }
 
 .headerblock h1{
@@ -136,11 +149,12 @@ a.button{
 
 }
 .courses article{
-	width: 20%;
-	float: left;
+	width: 20.3%;
 	text-align: center;
 	font-size: 10pt;
 	padding: 20px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .courses{
@@ -206,6 +220,7 @@ a#tuition {
 .extrainfo article{
 	width: 44%;
 	float: left;
+	margin-bottom: 40px;
 }
 .extrainfo p{
 	font-style: italic;
@@ -217,9 +232,6 @@ article.column_one{
 	margin-right: 100px;
 }
 
-.extrainfo {
-	height: 250px;
-}
 
 footer {
 	height: 500px;
